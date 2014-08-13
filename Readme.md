@@ -4,6 +4,10 @@
 
 * Install the [Docker.io](https://www.docker.com/)
 
+* Clone the repository
+
+    ```git clone https://github.com/latsku/Ell-i_emulator_Dockerfile.git```
+
 * Run to build the environment
 
     ```sudo docker build -t ELL-i/emulator --rm Ell-i_emulator_Dockerfile```
