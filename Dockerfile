@@ -23,9 +23,8 @@ RUN easy_install -Z docutils
 
 
 RUN git clone https://github.com/Ell-i/ELL-i-PyBot-Tests.git /data/PyBot-Tests
-
-ADD https://raw.githubusercontent.com/latsku/Ell-i_emulator_Dockerfile/master/runtime_path.patch /data/
-RUN patch --directory /data/PyBot-Tests/ < runtime_path.patch
+ADD runtime_path.patch /data/
+RUN patch --directory /data/PyBot-Tests/ < /data/runtime_path.patch
 
 ## We are using Asif's repository at the moment as the code is not integrator to the runtime master.
 # RUN git clone https://github.com/Ell-i/Runtime.git /data/Runtime
