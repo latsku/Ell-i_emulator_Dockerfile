@@ -43,7 +43,7 @@ RUN make -C /data/Runtime/stm32/build PLATFORM=emulator all
 VOLUME ["/data"]
 
 # Define working directory.
-WORKDIR /data
+WORKDIR /data/PyBot-Tests
 
 # Define default command.
 CMD ["bash"]
