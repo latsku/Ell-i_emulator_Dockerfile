@@ -14,10 +14,10 @@ RUN dpkg --add-architecture i386
 RUN apt-get update
 
 ## Install required libraries to build the ELL-i runtime in 32-bit environment.
-RUN apt-get install -y gcc libc6-dev-i386 lib32stdc++-4.8-dev
+RUN DEBIAN_FRONTEND=noninteractive apt-get install -y gcc libc6-dev-i386 lib32stdc++-4.8-dev
 
 ## Install 32-bit python & setuptools
-RUN apt-get install -y python:i386 python-setuptools
+RUN DEBIAN_FRONTEND=noninteractive apt-get install -y python:i386 python-setuptools
 RUN easy_install -Z robotframework
 RUN easy_install -Z docutils
 
